@@ -1,0 +1,1 @@
+Templates taken from 'WebGL Programming Guide by Kouichi Matsuda and Rodger Lea (2012)'.
