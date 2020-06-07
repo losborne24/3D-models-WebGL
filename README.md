@@ -4,4 +4,4 @@ A WebGL implementation of Durham Viaduct.
 
 Image of inspiration | WebGL Implementation
 :-------------:|:-------------:
-![Input image](./images/test2.png)  |  ![Output image](./images/test2_output2.png)
+![Input image](./images/viaduct.jpg)  |  ![Output image](./images/demo.png)
