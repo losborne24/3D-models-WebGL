@@ -1,7 +1,7 @@
-Assignment: A small 3D environment
+Assignment: 3D models
 
-A WebGL implementation of Durham Viaduct.
+A WebGL implementation of an environment based on a selected part of Durham City.
 
 Image of inspiration | WebGL Implementation
 :-------------:|:-------------:
-![Input image](./images/viaduct.jpg)  |  ![Output image](./images/demo.png)
+![Input image](./images/test2.png)  |  ![Output image](./images/test2_output2.png)

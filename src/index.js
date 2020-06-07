@@ -131,35 +131,32 @@ function main() {
 
   u_UseTextures = gl.getUniformLocation(gl.program, "u_UseTextures");
   u_Sampler = gl.getUniformLocation(gl.program, 'u_Sampler');
-
   var bwstripe = gl.createTexture();
-  bwstripe.image = new Image();
-  bwstripe.image.src = './textures/bwstripe.png';
-  bwstripe.image.onload = function () {
-    console.log("bwstripe texture loaded")
-    loadTexture(gl, bwstripe, gl.TEXTURE1);
-  };
   var grass = gl.createTexture();
-  grass.image = new Image();
-  grass.image.src = './textures/grass.png';
-  grass.image.onload = function () {
-    console.log("grass texture loaded")
-    loadTexture(gl, grass, gl.TEXTURE2);
-  };
   var road = gl.createTexture();
-  road.image = new Image();
-  road.image.src = './textures/road.png';
-  road.image.onload = function () {
-    console.log("road texture loaded")
-    loadTexture(gl, road, gl.TEXTURE3);
-  };
   var bricks = gl.createTexture();
-  bricks.image = new Image();
-  bricks.image.src = './textures/bricks.png';
+  var textureObj = [bwstripe, grass, road, bricks]
+  const textures = ["bwstripe", "grass", "road", "bricks"];
+  for (var i in textureObj) {
+    textureObj[i].image = new Image();
+    textureObj[i].image.src = `./textures/${textures[i]}.png`;
+  }
+  bwstripe.image.onload = function () {
+    console.log(`bwstripe texture loaded`);
+    loadTexture(gl, bwstripe, gl.TEXTURE1);
+  }
+  grass.image.onload = function () {
+    console.log(`grass texture loaded`);
+    loadTexture(gl, grass, gl.TEXTURE2);
+  }
+  road.image.onload = function () {
+    console.log(`road texture loaded`);
+    loadTexture(gl, road, gl.TEXTURE3);
+  }
   bricks.image.onload = function () {
-    console.log("bricks texture loaded")
+    console.log(`bricks texture loaded`);
     loadTexture(gl, bricks, gl.TEXTURE4);
-  };
+  }
   var loop = function () {
     translation = animateTranslate(translation);
     draw(gl, u_ModelMatrix, u_NormalMatrix, u_isLighting, u_UseTextures, arr_is, translation);
