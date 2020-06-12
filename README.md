@@ -1,4 +1,4 @@
-Assignment: 3D models
+Assignment: 3D models (Computer Graphics)
 
 A WebGL implementation of an environment based on a selected part of Durham City.
 
